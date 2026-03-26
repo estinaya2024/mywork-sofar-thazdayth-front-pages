@@ -77,31 +77,38 @@ const Plats = () => {
       </section>
 
       <section className="px-6 lg:px-10 max-w-7xl mx-auto pb-20 lg:pb-32">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
           {dishes.map((dish: Dish, i: number) => (
             <SectionReveal key={dish.name} delay={i * 0.1}>
               <div
-                className="group cursor-pointer"
+                className="group cursor-pointer bg-background border border-foreground/5 shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl p-6"
                 onClick={() => setSelectedDish(dish)}
               >
-                <div className="overflow-hidden rounded-2xl mb-5">
+                <div className="overflow-hidden rounded-2xl mb-6 aspect-[16/10]">
                   <motion.img
                     src={dish.image}
                     alt={dish.name}
-                    className="w-full h-[300px] lg:h-[400px] object-cover"
+                    className="w-full h-full object-cover"
                     whileHover={{ scale: 1.06 }}
                     transition={{ duration: 0.6 }}
                   />
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {dish.name}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
                   {dish.desc}
                 </p>
-                <span className="text-xs font-medium text-primary underline underline-offset-4">
-                  {t("plats.modal.link")}
-                </span>
+                <div className="flex items-center text-xs font-semibold text-primary uppercase tracking-wider">
+                  <span>{t("plats.modal.link")}</span>
+                  <motion.span 
+                    className="ml-2"
+                    initial={{ x: 0 }}
+                    whileHover={{ x: 4 }}
+                  >
+                    →
+                  </motion.span>
+                </div>
               </div>
             </SectionReveal>
           ))}
@@ -128,7 +135,7 @@ const Plats = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Image d'en-tête */}
-              <div className="relative h-[250px] lg:h-[350px] overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   src={selectedDish.image}
                   alt={selectedDish.name}
