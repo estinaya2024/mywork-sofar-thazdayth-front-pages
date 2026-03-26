@@ -388,18 +388,24 @@ export const kab = {
     },
     region: {
         hero: {
-            title: "Tamurt-nneɣ"
+            title: "Tubiret d Ğerğer"
         },
         earth: {
-            badge: "Akal",
-            title: "Tamurt n leqbayel, akal n uzemmur n zik",
-            desc1: "Tamurt n leqbayel d adrar deg ugafa n Lezzayer, anda tizemrin d timeqqranin ɣef yidurar n Ǧerǧer. Lḥala n lhawwa yufraren — gar yilel agrakal d tqacucin yebbexsen — tettak-d i tzemrin lḥala n temɣur yufraren.",
-            desc2: "Akal n wakalu d yedɣaɣen, yettwazedgen s tsutwin n tyerza n zik, yettak-d azemmur d arukuti s rriḥa n zik yufraren. Mkul ttejra d inigi n tmeddurt n umezruy n wegdud-nneɣ."
+            badge: "Terroir-nneɣ",
+            title: "Lḥayzer d lwad n Sahel",
+            desc1: "Deg uḍar n wedrar n Ğerğer, tamnaḍt n Lḥayzer d lwad n Sahel fkant tamurt tayefrant. Dagi, ger tiziwin n wedfel d tizeggwa yellan di lqaɛa, i d-yessufuɣ nnefs-nsent tzeddayin nneɣ n zik.",
+            desc2: "Lḥal n Tubiret, yeččuren d asemmiḍ n tegrest d lḥam n unebdu, i d-yettaken lbenna yezran n zzit-nneɣ. Lɛali n wedrar d lhu n nnefs n ljbel rran tiqzitin nneɣ d tifefranin."
         },
         people: {
-            title: "Agdud, tismin n tyerza",
-            desc1: "Iqbayliyen xerzen tizemrin seg luluf iseggasen aya. Mačči kan d ttejra — d azamul n lḥerma, tuzzma d unteq ɣer wakal. Zzit n uzemmur d ul n yidles n leqbayel: teddut akk d wučči, mkul tameɣra, mkul amennuɣ.",
-            desc2: "Tiwacilin-nneɣ n yifellaḥen teṭṭefent ccan-a seg tyemmat ɣer yelli-s, seg baba-s ɣer mmi-s. Mkul tḥawact d tameɣra, mkul aɛṣar d aḥric n ubrid yufraren."
+            title: "Lweṛt n wedrar-nneɣ",
+            desc1: "Di Tubiret, llejlal n uzemmur d lmecwaṛ n dunnit. Twaculin n Lḥayzer ḥerzent leɛwayed n zik d tizi n tiwizi d leɛnaya. Yal tiqqit n zzit tettɛawad-d aqessas n yergazen d tlawin n Ğerğer.",
+            desc2: "Musnaw n yergazen nneɣ tettɛedday-d si lǧil ɣer lǧil. Nexled leɛwayed-agi s uḥraz n tarrayin n zik n uṣerrey n uzemmur i d-yennan isem i tmurt-nneɣ."
+        },
+        history: {
+            badge: "Amezruy",
+            title: "Tizi n leɛwayed",
+            desc1: "Tamurt n Tubiret, d tamdint n zik-nni yellan d tizi n sswa i tnezzut. Amezruy-is yezra amkan-is d 'Suq' ameqqran n Tmurt n Leqbayel, yellan zik d aḥraz s lburğ n Leɛtemman.",
+            desc2: "Seg umezruy n les Rumi dunnit ɣer wassa, tazdayt d llsas n tudert di tmurt-agi. Lḥayzer, d tizi n Ğerğer, d aḥerraz n lweṛt-agi n uzemmur i d-yettaken isem."
         },
         gallery: {
             title: "Tugniwin"
