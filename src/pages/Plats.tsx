@@ -77,38 +77,31 @@ const Plats = () => {
       </section>
 
       <section className="px-6 lg:px-10 max-w-7xl mx-auto pb-20 lg:pb-32">
-        <div className="columns-1 md:columns-2 gap-10 lg:gap-16 [column-fill:_balance]">
+        <div className="grid md:grid-cols-2 gap-8">
           {dishes.map((dish: Dish, i: number) => (
             <SectionReveal key={dish.name} delay={i * 0.1}>
               <div
-                className="group cursor-pointer break-inside-avoid mb-12 lg:mb-20"
+                className="group cursor-pointer"
                 onClick={() => setSelectedDish(dish)}
               >
-                <div className="rounded-2xl mb-6 overflow-hidden">
+                <div className="overflow-hidden rounded-2xl mb-5">
                   <motion.img
                     src={dish.image}
                     alt={dish.name}
-                    className="w-full h-auto rounded-2xl"
-                    whileHover={{ scale: 1.03 }}
-                    transition={{ duration: 0.5 }}
+                    className="w-full h-[300px] lg:h-[400px] object-cover"
+                    whileHover={{ scale: 1.06 }}
+                    transition={{ duration: 0.6 }}
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                   {dish.name}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   {dish.desc}
                 </p>
-                <div className="flex items-center text-xs font-bold text-primary uppercase tracking-widest">
-                  <span>{t("plats.modal.link")}</span>
-                  <motion.span 
-                    className="ml-2"
-                    animate={{ x: [0, 4, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.5 }}
-                  >
-                    →
-                  </motion.span>
-                </div>
+                <span className="text-xs font-medium text-primary underline underline-offset-4">
+                  {t("plats.modal.link")}
+                </span>
               </div>
             </SectionReveal>
           ))}
@@ -135,11 +128,11 @@ const Plats = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Image d'en-tête */}
-              <div className="relative overflow-hidden">
+              <div className="relative h-[250px] lg:h-[350px] overflow-hidden">
                 <img
                   src={selectedDish.image}
                   alt={selectedDish.name}
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
                 <button
                   onClick={() => setSelectedDish(null)}
