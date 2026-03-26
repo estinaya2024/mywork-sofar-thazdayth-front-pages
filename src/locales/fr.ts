@@ -82,6 +82,8 @@ export const fr = {
         },
         story: {
             badge: "Notre Histoire",
+            title: "L'Héritage de nos montagnes",
+            desc: "Nichée dans les paysages majestueux de Kabylie, notre aventure a commencé avec une passion pour la qualité et un respect profond pour la nature. Nous perpétuons un savoir-faire millénaire pour vous offrir une huile d'olive d'exception.",
             text1_bold: "Nichée dans les paysages majestueux de Kabylie,",
             text1: "notre aventure a commencé avec une passion pour la qualité et un profond respect pour la nature. Inspirés par des générations d'oléiculteurs, nous avons entrepris de produire une huile d'olive biologique premium qui reflète le riche patrimoine de cette belle région.",
             text2: "Chaque bouteille de notre huile d'olive porte l'essence de notre engagement envers des pratiques agricoles durables et le savoir-faire minutieux qui définit notre approche."

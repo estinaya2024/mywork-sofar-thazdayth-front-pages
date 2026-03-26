@@ -82,6 +82,8 @@ export const en = {
         },
         story: {
             badge: "Our Story",
+            title: "The Heritage of our mountains",
+            desc: "Nestled in the majestic landscapes of Kabylia, our journey began with a passion for quality and deep respect for nature. We carry on ancient traditions to bring you exceptional olive oil.",
             text1_bold: "Nestled in the majestic landscapes of Kabylia,",
             text1: "our adventure began with a passion for quality and a deep respect for nature. Inspired by generations of olive growers, we set out to produce premium organic olive oil that reflects the rich heritage of this beautiful region.",
             text2: "Every bottle of our olive oil carries the essence of our commitment to sustainable farming practices and the meticulous craftsmanship that defines our approach."
