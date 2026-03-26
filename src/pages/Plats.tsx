@@ -77,14 +77,14 @@ const Plats = () => {
       </section>
 
       <section className="px-6 lg:px-10 max-w-7xl mx-auto pb-20 lg:pb-32">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           {dishes.map((dish: Dish, i: number) => (
             <SectionReveal key={dish.name} delay={i * 0.1}>
               <div
-                className="group cursor-pointer bg-background border border-foreground/5 shadow-sm hover:shadow-md transition-all duration-300 rounded-3xl p-6"
+                className="group cursor-pointer"
                 onClick={() => setSelectedDish(dish)}
               >
-                <div className="overflow-hidden rounded-2xl mb-6 aspect-[16/10] bg-muted/20">
+                <div className="overflow-hidden rounded-2xl mb-6 aspect-[16/10]">
                   <motion.img
                     src={dish.image}
                     alt={dish.name}
@@ -96,15 +96,16 @@ const Plats = () => {
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
                   {dish.name}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
                   {dish.desc}
                 </p>
-                <div className="flex items-center text-xs font-semibold text-primary uppercase tracking-wider">
+                <div className="flex items-center text-xs font-bold text-primary uppercase tracking-widest">
                   <span>{t("plats.modal.link")}</span>
                   <motion.span 
                     className="ml-2"
                     initial={{ x: 0 }}
-                    whileHover={{ x: 4 }}
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5 }}
                   >
                     →
                   </motion.span>
@@ -135,7 +136,7 @@ const Plats = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Image d'en-tête */}
-              <div className="relative aspect-video overflow-hidden bg-muted/20">
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   src={selectedDish.image}
                   alt={selectedDish.name}
