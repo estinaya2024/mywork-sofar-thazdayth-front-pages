@@ -22,7 +22,7 @@ const Region = () => {
   // State to manage the currently enlarged image in the gallery
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const images = [heroImg, oliveImg5, oliveImg2, "/region1.jpg", "/region2.jpg", "/region3.jpg"];
+  const images = [heroImg, oliveImg5, oliveImg2, "/region1.jpg", "/region2.jpg", "/region3.jpg", "/Oliviers-Bouira-e1613418625492.jpg"];
 
   return (
     <div className="min-h-screen bg-background">
