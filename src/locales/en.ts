@@ -243,27 +243,27 @@ export const en = {
                 }
             },
             {
-                name: "Couscous with olive oil",
-                desc: "The emblematic dish, hand-rolled and served with fresh vegetables. Olive oil gives it its unique character.",
-                history: "Couscous has been listed as intangible cultural heritage of humanity by UNESCO since 2020. In Kabylia, its preparation is a sacred art. Women roll the semolina grains by hand in large wooden dishes called 'guessaâ', a repetitive and hypnotic gesture passed down since antiquity. Kabyle couscous is distinguished by its generous seasoning with olive oil — no butter here. Every Friday, a sacred day, families gather around this dish, served in a large communal dish. It's much more than a meal: it's a ritual of sharing and family cohesion.",
+                name: "Hmis",
+                desc: "A salad of grilled peppers and tomatoes, reduced in a pan with a generous dose of olive oil.",
+                history: "Hmis is the quintessential starter of Kabyle gastronomy. Its preparation is a ritual of patience: the peppers and tomatoes are grilled over embers (or fire) to give them that characteristic smoky taste, then peeled and finely chopped. The mixture is then reduced over low heat to concentrate the flavors, before being bound by extra virgin olive oil. Accompanied by a piece of Aghrum, it is a delight that whets the appetite and celebrates the simplicity of garden products.",
                 recipe: {
                     ingredients: [
-                        "500g medium couscous",
-                        "4 tablespoons TAZDAYTH olive oil",
-                        "Seasonal vegetables (zucchini, carrots, turnips, chickpeas)",
-                        "1 onion, 2 tomatoes",
-                        "Spices: turmeric, black pepper, salt",
-                        "Vegetable broth",
+                        "500g green peppers (sweet and/or hot)",
+                        "3 ripe tomatoes",
+                        "3 cloves of garlic",
+                        "4 tablespoons of TAZDAYTH olive oil",
+                        "Salt",
                     ],
                     steps: [
-                        "Roll the couscous by hand with a drizzle of olive oil and a little salted water.",
-                        "Steam in a couscous maker for 20 minutes, in 3 passes.",
-                        "Between each pass, separate the grains and drizzle with TAZDAYTH olive oil.",
-                        "Prepare the broth with the chopped vegetables, spices and tomatoes.",
-                        "Simmer the vegetables until tender.",
-                        "Serve the couscous in a dome, drizzled with broth, with a generous drizzle of olive oil.",
+                        "Grill the peppers and tomatoes over the fire until the skin blackens.",
+                        "Place the vegetables in a plastic bag for a few minutes to make peeling easier.",
+                        "Peel the vegetables, remove the seeds, and finely chop them with a knife or pestle.",
+                        "Put the mixture in a pan with the chopped garlic and salt.",
+                        "Let reduce over medium heat until the tomato water has completely evaporated.",
+                        "Off the heat, generously drizzle with extra virgin TAZDAYTH olive oil.",
+                        "Serve hot or cold with flatbread."
                     ],
-                    chef_tip: "The secret of Kabyle couscous lies in generosity. Use our Extra Virgin oil at each rolling step for silky grains."
+                    chef_tip: "For an exceptional Hmis, use our Extra Virgin oil. Its sweetness will balance the spiciness of the grilled peppers."
                 }
             },
             {

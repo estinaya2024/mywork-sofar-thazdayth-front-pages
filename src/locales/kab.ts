@@ -242,27 +242,27 @@ export const kab = {
                 }
             },
             {
-                name: "Seksou s zzit n uzemmur",
-                desc: "Učči afellay, yettwaftel s ufus yettwačča s lxedṛa n lexla. Zzit n uzemmur tettakk-as ccan-is yufraren.",
-                history: "Seksou yettwajerred d agerruj n temlilit n UNESCO seg 2020. Deg temurt n leqbayel, aheyyi-s d tasekkurt tuɣzirt. Tilawin fettlent iceqquyen n smid s ufus deg yiḍebsiyen n wesɣar meqqren i wumi qqaren « teqṣiɛt », d anya yettuɣalen seg zik n zik. Seksou n leqbayel yemxallaf s ussewwi-s meqqren s zzit n uzemmur — ulac ssemn dagi. Mkul ass n lǧemɛa, d ass ameqqran, tiwacilin ttemlalent ɣef učči-a, yettunefk deg uḍebsi ameqqran. D ayen yugaren učči: d aḥric n beṭṭu d telwit gar twacult.",
+                name: "Hmis",
+                desc: "Taclada n yifelfel d tmuṭicin kkawen, tesserrem deg tmaqlet s rremi n zith n uzemmur.",
+                history: "Hmis d učči amezwaru n teqbaylit. Aheggi-ines d tamsirt n ṣṣbeṛ: ifelfel d tmuṭicin sseww-iten deg tmes (neɣ deg lfeḥmar) iwakken ad d-fken rriḥa n lkanun, sakin kkes-asen ticelmert-nsen, gzem-iten mliḥ. Sexleḍ-iten sakin deg tmaqlet deg tmes tamassayt iwakken ad kken waman n tmuṭicin, deffir-as sexleḍ-iten s zith n uzemmur Extra Vierge. S weghrum, d lbenna n ṣṣeḥ i d-isbanayen cbaḥa n lfetra n lexla.",
                 recipe: {
                     ingredients: [
-                        "500g n seksou alemmas",
-                        "4 tɣenjawin n zzit n uzemmur TAZDAYTH",
-                        "Lxedṛa n lweqt (tixsayin, zrudiya, lleft, lḥemṣ)",
-                        "1 n tbeslet, 2 n tmuṭicin",
-                        "Isufar : lkarkum, lfilfel aberkan, lmelḥ",
-                        "Aman n lxedṛa",
+                        "500g n yifelfel izegzawen (iḥlawen neɣ d iḥercawen)",
+                        "3 n tmuṭicin yewwan",
+                        "3 n tzeqqa n ttum",
+                        "4 tɣenjawin n zith n uzemmur TAZDAYTH",
+                        "Lmelḥ",
                     ],
                     steps: [
-                        "Ftel seksou s ufus d tiqqit n zzit n uzemmur d cwiṭ n waman lmelḥ.",
-                        "Seww s lfuwar deg tkeskast 20 n tesdatin, 3 times.",
-                        "Gar mkul tikelt, ferq iceqquyen d wesseɛ s zzit n uzemmur TAZDAYTH.",
-                        "Heyyi aman n lxedṛa s lxedṛa yettwagezmen, isufar d tmuṭicin.",
-                        "Eǧǧ lxedṛa ad tteww.",
-                        "Fk seksou am udrar, wesseɛ s waman n lxedṛa d zzit n uzemmur sṭṭas.",
+                        "Sseww ifelfel d tmuṭicin deg tmes alamma tberken tcelmert-nsen.",
+                        "Err-iten deg cckara n lplastic i kra n tminutin iwakken ad fessus unegla-nsen.",
+                        "Kkes-asen ticelmert, kkes-asen iɛeqqayen, sakin gzem-iten mliḥ s tsekkin neɣ s umehraz.",
+                        "Ssers-iten deg tmaqlet s ttum yejdan d lmelḥ.",
+                        "Eǧǧ-iten ad ssiwen deg tmes tamassayt alamma kkawen waman n tmuṭicin.",
+                        "Mi d-kksem deg tmes, ssebleɛ-iten s zith n uzemmur TAZDAYTH Extra Vierge.",
+                        "Fk-it-id d aḥmayan neɣ d aṣemḍan s weghrum."
                     ],
-                    chef_tip: "Lbaḍna n sekksu n tmaziɣt d lkaram. Sseqdec zzit-nneɣ Extra Vierge deg yal tikkelt iwakken iɛeqqayen ad d-ffɣen d iẓidanen."
+                    chef_tip: "Iwakken ad d-taf-ḍ Hmis yufraren, ssexdem zith-nneɣ Extra Vierge. Lbenna-s ad d-tessemtawi lḥeṛca n yifelfel yewwan."
                 }
             },
             {

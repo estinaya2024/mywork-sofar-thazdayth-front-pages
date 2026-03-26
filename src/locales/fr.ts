@@ -243,27 +243,27 @@ export const fr = {
                 }
             },
             {
-                name: "Couscous à l'huile d'olive",
-                desc: "Le plat emblématique, roulé à la main et accompagné de légumes frais. L'huile d'olive lui donne son caractère unique.",
-                history: "Le couscous est inscrit au patrimoine immatériel de l'humanité par l'UNESCO depuis 2020. En Kabylie, sa préparation est un art sacré. Les femmes roulent les grains de semoule à la main dans de grands plats en bois appelés « guessaâ », un geste répétitif et hypnotique transmis depuis l'Antiquité. Le couscous kabyle se distingue par son assaisonnement généreux à l'huile d'olive — pas de beurre ici. Chaque vendredi, jour sacré, les familles se réunissent autour de ce plat, servi dans un grand plat commun. C'est bien plus qu'un repas : c'est un rituel de partage et de cohésion familiale.",
+                name: "Hmis",
+                desc: "Une salade de poivrons et tomates grillés, réduite à la poêle avec une généreuse dose d'huile d'olive.",
+                history: "Le Hmis est l'entrée par excellence de la gastronomie kabyle. Sa préparation est un rituel de patience : les poivrons et les tomates sont grillés sur la braise (ou sur le feu) pour leur donner ce goût fumé si caractéristique, puis pelés et hachés finement. La mixture est ensuite réduite à petit feu pour concentrer les saveurs, avant d'être liée par l'huile d'olive extra vierge. Accompagné d'un morceau d'Aghrum, c'est un délice qui ouvre l'appétit et célèbre la simplicité des produits maraîchers.",
                 recipe: {
                     ingredients: [
-                        "500g de couscous moyen",
+                        "500g de poivrons verts (doux et/ou piquants)",
+                        "3 tomates mûres",
+                        "3 gousses d'ail",
                         "4 cuillères à soupe d'huile d'olive TAZDAYTH",
-                        "Légumes de saison (courgettes, carottes, navets, pois chiches)",
-                        "1 oignon, 2 tomates",
-                        "Épices : curcuma, poivre noir, sel",
-                        "Bouillon de légumes",
+                        "Sel",
                     ],
                     steps: [
-                        "Rouler le couscous à la main avec un filet d'huile d'olive et un peu d'eau salée.",
-                        "Cuire à la vapeur dans un couscoussier pendant 20 minutes, en 3 passages.",
-                        "Entre chaque passage, égrener les grains et arroser d'huile d'olive TAZDAYTH.",
-                        "Préparer le bouillon avec les légumes coupés, les épices et les tomates.",
-                        "Laisser mijoter les légumes jusqu'à tendreté.",
-                        "Servir le couscous en dôme, arrosé de bouillon, avec un filet généreux d'huile d'olive.",
+                        "Griller les poivrons et les tomates sur le feu jusqu'à ce que la peau noircisse.",
+                        "Placer les légumes dans un sac en plastique quelques minutes pour faciliter l'épluchage.",
+                        "Peler les légumes, retirer les graines et les hacher finement au couteau ou au pilon.",
+                        "Mettre le mélange dans une poêle avec l'ail haché et le sel.",
+                        "Laisser réduire à feu moyen jusqu'à évaporation complète de l'eau des tomates.",
+                        "Hors du feu, arroser généreusement d'huile d'olive TAZDAYTH extra vierge.",
+                        "Servir chaud ou froid avec de la galette."
                     ],
-                    chef_tip: "Le secret du couscous kabyle réside dans la générosité. Utilisez notre huile Extra Vierge à chaque étape du roulage pour des grains soyeux."
+                    chef_tip: "Pour un Hmis d'exception, utilisez notre huile Extra Vierge. Sa douceur viendra équilibrer le piquant des poivrons grillés."
                 }
             },
             {
