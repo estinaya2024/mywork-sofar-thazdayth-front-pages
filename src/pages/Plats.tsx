@@ -12,11 +12,6 @@ import SectionReveal from "@/components/SectionReveal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackButton from "@/components/BackButton";
-import foodImg1 from "@/assets/food-img-1.jpg";
-import foodImg3 from "@/assets/food-img-3.jpg";
-import oliveImg2 from "@/assets/olive-img-2.jpg";
-import oliveImg5 from "@/assets/olive-img-5.jpg";
-
 interface Dish {
   name: string;
   desc: string;
@@ -32,10 +27,10 @@ interface Dish {
 const getDishes = (t: any) => {
   const list = t("plats.list", { returnObjects: true }) as any[];
   return [
-    { ...list[0], image: "https://i.pinimg.com/736x/13/03/3c/13033c416722c85ff6e9bc1b8916ee2f.jpg" },
-    { ...list[1], image: foodImg3 },
-    { ...list[2], image: oliveImg2 },
-    { ...list[3], image: oliveImg5 },
+    { ...list[0], image: "/recette1.jpg" },
+    { ...list[1], image: "/recette2.jpg" },
+    { ...list[2], image: "/recette3.jpg" },
+    { ...list[3], image: "/recette5.jpg" },
   ];
 };
 
