@@ -11,21 +11,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, User, Globe, Check, ShoppingBag } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { LogOut, Bell } from "lucide-react";
 
-// MOCKED AUTH FOR CLEANUP (Teacher-only view)
-const useAuth = () => ({
-  isAuthenticated: false,
-  user: null,
-  token: null,
-  logout: () => {},
-});
+
 
 // Configuration for site-wide links
 const getLeftLinks = (t: any) => [
@@ -47,9 +34,9 @@ const languages = [
 
 const Navbar = ({ className = "", onNotificationClick }: { className?: string, onNotificationClick?: (type: 'order' | 'pressing', id: string) => void }) => {
   const { t, i18n } = useTranslation();
-  const { isAuthenticated, user, token, logout } = useAuth();
   const [scrolled, setScrolled] = useState(false); // Controls background transparency on scroll
   const [menuOpen, setMenuOpen] = useState(false); // Mobile menu state
+  const [langMenuOpen, setLangMenuOpen] = useState(false); // Language dropdown state
   const location = useLocation();
 
   // Change navbar appearance when user scrolls down
@@ -69,9 +56,6 @@ const Navbar = ({ className = "", onNotificationClick }: { className?: string, o
   const leftLinks = getLeftLinks(t);
   const rightLinks = getRightLinks(t);
   const allLinks = [...leftLinks, ...rightLinks];
-  if (isAuthenticated) {
-    allLinks.push({ to: "/suivi", label: t("nav.tracking") });
-  }
 
   // Language switching function via i18next
   const handleLanguageChange = (langCode: string) => {
@@ -127,34 +111,39 @@ const Navbar = ({ className = "", onNotificationClick }: { className?: string, o
           {/* Right area: Icons */}
           <div className="flex items-center justify-end gap-4 z-10 flex-1">
 
-            <Link to="/boutique" className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors hover:scale-110 duration-200">
-              <ShoppingBag className="w-4 h-4 stroke-[2.5]" />
-            </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 text-sm text-foreground/70 hover:text-primary transition-colors focus:outline-none">
-                  <Globe className="w-4 h-4" />
-                  <span className="hidden lg:inline text-xs">{currentLang.toUpperCase()}</span>
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-32">
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => handleLanguageChange(lang.code)}
-                    className="flex flex-row items-center justify-between cursor-pointer"
+            <div className="relative">
+              <button 
+                onClick={() => setLangMenuOpen(!langMenuOpen)}
+                className="flex items-center gap-1 text-sm text-foreground/70 hover:text-primary transition-colors focus:outline-none"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="hidden lg:inline text-xs">{currentLang.toUpperCase()}</span>
+              </button>
+              
+              <AnimatePresence>
+                {langMenuOpen && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-2 w-32 rounded-md border bg-popover p-1 text-popover-foreground shadow-md"
                   >
-                    <span>{lang.label}</span>
-                    {currentLang === lang.code && <Check className="w-4 h-4 text-primary" />}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => { handleLanguageChange(lang.code); setLangMenuOpen(false); }}
+                        className="flex w-full items-center justify-between rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+                      >
+                        <span>{lang.label}</span>
+                        {currentLang === lang.code && <Check className="w-4 h-4 text-primary" />}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-            <Link to="/connexion" className="hidden lg:flex items-center gap-1 text-foreground/70 hover:text-primary transition-colors">
-              <User className="w-4 h-4 stroke-[2.2]" />
-            </Link>
 
             <button onClick={() => setMenuOpen(true)} className="lg:hidden text-foreground">
               <Menu className="w-5 h-5" />
@@ -224,7 +213,6 @@ const Navbar = ({ className = "", onNotificationClick }: { className?: string, o
                     </button>
                   ))}
                 </div>
-                <Link to="/connexion" className="text-lg text-foreground/60">{t("nav.login")}</Link>
               </motion.div>
             </div>
           </motion.div>

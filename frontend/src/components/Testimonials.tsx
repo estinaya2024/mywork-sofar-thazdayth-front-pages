@@ -71,11 +71,11 @@ const Testimonials = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        toast({ title: "Mode Démo", description: "Les commentaires sont désactivés dans cette version statique.", variant: "default" });
+        toast({ title: "Note ", description: "Les commentaires sont désactivés dans cette version statique.", variant: "default" });
     };
 
     const handleDelete = async (id: string) => {
-        toast({ title: "Mode Démo", description: "La suppression est désactivée dans cette version statique.", variant: "default" });
+        toast({ title: "Note ", description: "La suppression est désactivée dans cette version statique.", variant: "default" });
     };
 
     const renderStars = (count: number, interactive = false) => {
@@ -132,9 +132,8 @@ const Testimonials = () => {
                         className="lg:col-span-1 bg-secondary/30 border border-border p-8 rounded-[2rem] sticky top-24"
                     >
                         <h3 className="text-xl font-bold mb-6">Partagez votre expérience</h3>
-                        {user ? (
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="space-y-2">
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="space-y-2">
                                     <label className="text-[10px] font-black uppercase tracking-widest text-muted-foreground ml-1">Note globale</label>
                                     <div className="p-4 bg-background/50 rounded-2xl border border-border/50">
                                         {renderStars(rating, true)}
@@ -157,14 +156,6 @@ const Testimonials = () => {
                                     {loading ? "Chargement..." : <><Send className="w-4 h-4" /> Publier mon avis</>}
                                 </button>
                             </form>
-                        ) : (
-                            <div className="text-center py-6">
-                                <p className="text-sm text-muted-foreground mb-4">Connectez-vous pour laisser un avis sur nos services.</p>
-                                <Link to="/connexion?redirect=/" className="text-sm font-bold text-primary hover:underline flex items-center justify-center gap-2">
-                                    Se connecter <Send className="w-3 h-3" />
-                                </Link>
-                            </div>
-                        )}
                     </motion.div>
 
                     {/* Comments List */}
@@ -211,15 +202,13 @@ const Testimonials = () => {
                                                 <div className="px-3 py-1 bg-background rounded-full border border-border/50 shadow-sm">
                                                     {renderStars(c.rating)}
                                                 </div>
-                                                {(user?._id === c.user_id?._id || user?.role === 'owner') && (
-                                                    <button
+                                                <button
                                                         onClick={() => handleDelete(c._id)}
                                                         className="p-2 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-full transition-all"
                                                         title="Supprimer"
                                                     >
                                                         <Trash2 className="w-4 h-4" />
-                                                    </button>
-                                                )}
+                                                </button>
                                             </div>
                                         </div>
                                         <p className="text-foreground/80 text-sm leading-relaxed italic border-l-2 border-primary/20 pl-6 py-2">

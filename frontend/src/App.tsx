@@ -7,7 +7,6 @@
 
 import { useState, useCallback } from "react";
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -31,7 +30,6 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Sonner />
         <AnimatePresence mode="wait">
           {loading && <LoadingScreen onComplete={handleComplete} />}
         </AnimatePresence>
@@ -42,14 +40,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/processus" element={<Processus />} />
               <Route path="/plats" element={<Plats />} />
-              <Route path="/boutique" element={<NotFound />} />
               <Route path="/region" element={<Region />} />
               <Route path="/a-propos" element={<APropos />} />
-              <Route path="/connexion" element={<NotFound />} />
-              <Route path="/inscription" element={<NotFound />} />
-              <Route path="/mot-de-passe-oublie" element={<NotFound />} />
-              <Route path="/suivi" element={<NotFound />} />
-              <Route path="/dashboard" element={<NotFound />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
