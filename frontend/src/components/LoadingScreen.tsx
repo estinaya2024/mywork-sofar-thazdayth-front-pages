@@ -1,8 +1,17 @@
+/**
+ * LOADING SCREEN COMPONENT
+ * Displayed on first app visit before content is ready.
+ * Shows a branded splash screen with an animated progress bar.
+ * Automatically calls `onComplete` once the progress reaches 100%.
+ */
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import loadingImg from "@/assets/loading-olives.jpg";
 
+// Static positions for the small decorative olive images scattered across the background.
+// Each entry defines: position (top/left as %), rotation angle (rot in deg), size (px), and image variant (type 1 or 2).
 const BACKGROUND_DECORATIONS = [
   { top: '12%', left: '8%', rot: 45, size: 60, type: 1 },
   { top: '22%', left: '82%', rot: -30, size: 50, type: 2 },
@@ -30,22 +39,26 @@ const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
   const { t } = useTranslation();
   const [progress, setProgress] = useState(0);
 
+  // Simulates a loading progress bar over ~1.2 seconds.
+  // A small random offset is added each tick to make the animation feel organic.
+  // Once progress hits 100, `onComplete` is called after a brief 100ms delay
+  // to allow the bar to visually fill before the screen fades out.
   useEffect(() => {
-    const duration = 1200;
-    const interval = 20;
-    const step = 100 / (duration / interval);
+    const duration = 1200; // Total loading animation duration in ms
+    const interval = 20;   // Timer tick rate in ms
+    const step = 100 / (duration / interval); // Progress increment per tick
     const timer = setInterval(() => {
       setProgress((prev) => {
         const next = prev + step + Math.random() * 0.8;
         if (next >= 100) {
           clearInterval(timer);
-          setTimeout(onComplete, 100);
+          setTimeout(onComplete, 100); // Small delay before hiding the screen
           return 100;
         }
         return next;
       });
     }, interval);
-    return () => clearInterval(timer);
+    return () => clearInterval(timer); // Cleanup on unmount
   }, [onComplete]);
 
   return (

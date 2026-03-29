@@ -1,7 +1,15 @@
+/**
+ * FOOTER COMPONENT
+ * Site-wide footer displayed at the bottom of every page.
+ * Includes: brand info, navigation links, legal mentions, and social media icons.
+ * All text content is driven by i18n translation keys for multilingual support (FR / EN / Kabyle).
+ */
+
 import { Link } from "react-router-dom";
 import { Instagram, Facebook } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+// Navigation links shown in the footer menu column — mirrors the Navbar links
 const getMenuLinks = (t: any) => [
   { to: "/", label: t("nav.home") },
   { to: "/processus", label: t("nav.process") },
